@@ -13,9 +13,9 @@ const merge = (arr, l, m, h) => {
   let dummyArr = new Array(h - l + 1),
     k = 0;
   for (let i = l; i <= h; i++) {
-    if (p > mid) {
+    if (p > m) {
       dummyArr[k++] = arr[q++];
-    } else if (q > end) {
+    } else if (q > h) {
       dummyArr[k++] = arr[p++];
     } else if (arr[p] < arr[q]) {
       dummyArr[k++] = arr[p++];
@@ -23,5 +23,7 @@ const merge = (arr, l, m, h) => {
       dummyArr[k++] = arr[q++];
     }
   }
-  dummyArr.forEach((val, idx) => (arr[idx] = val));
+   for(let i=0;i<k;i++){
+    arr[l++] = dummyArr[i];
+  } 
 };
