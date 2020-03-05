@@ -23,7 +23,7 @@ const merge = (arr, l, m, h) => {
       dummyArr[k++] = arr[q++];
     }
   }
-   for(let i=0;i<k;i++){
+  for (let i = 0; i < k; i++) {
     arr[l++] = dummyArr[i];
-  } 
+  }
 };
